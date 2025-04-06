@@ -10,7 +10,6 @@ interface TrackProps {
   track: Track
   index: number
   audioPills: AudioPill[]
-  allPills: AudioPill[]
   scale: number
   onMovePill: (pillId: string, sourceTrackId: string, destinationTrackId: string, newStartTime: number) => void
   onRemoveTrack: (trackId: string) => void
@@ -21,7 +20,6 @@ export default function TrackComponent({
   track,
   index,
   audioPills,
-  allPills,
   scale,
   onMovePill,
   onRemoveTrack,
