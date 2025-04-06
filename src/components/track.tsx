@@ -40,10 +40,11 @@ export default function TrackComponent({
     if (trackRef.current) {
       const trackRect = trackRef.current.getBoundingClientRect()
       const offsetX = e.clientX - trackRect.left
-      const dragOffsetX = Number.parseInt(e.dataTransfer.getData("drag-offset-x") || "0", 10)
-
+      console.log('trackRect ==>', trackRect)
+      console.log('e.clientX ==>', e.clientX)
+      console.log('e ==>', e)
       // Adjust position by drag offset if available
-      const adjustedPosition = Math.max(0, (offsetX - dragOffsetX) / scale)
+      const adjustedPosition = Math.max(0, (offsetX) / scale)
       // Round to nearest 0.5 second for better precision
       const roundedPosition = Math.round(adjustedPosition * 2) / 2
       setDropIndicatorPosition(roundedPosition * scale)

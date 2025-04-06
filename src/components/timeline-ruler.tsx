@@ -9,8 +9,9 @@ export default function TimelineRuler({ scale, duration }: { scale: number; dura
 
     tickMarks.push(
       <div key={i} className="absolute top-0 bottom-0" style={{ left: `${i * scale}px` }}>
-        <div className={`h-${isMajorTick ? 4 : 2} w-px bg-${isMajorTick ? "gray-400" : "gray-300"}`} />
+        <div className={`h-${isMajorTick ? 4 : 4} w-px bg-${isMajorTick ? "gray-400" : "gray-300"}`} />
         {isMajorTick && <div className="text-xs text-gray-500 absolute -ml-2">{i}</div>}
+        {isHalfSecond && <div className="text-xs text-gray-500 absolute -ml-2">|</div>}
       </div>,
     )
   }
