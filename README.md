@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Camb.ai audio playground
 
-## Getting Started
+A modern web application for arranging and playing audio clips on a timeline. This tool allows users to upload audio files, position them on a timeline, and play them back with precise timing.
 
-First, run the development server:
+## Features
+
+- Upload and manage multiple audio files
+- Drag and drop interface for positioning audio clips on a timeline
+- Precise playback with half-second increments
+- Waveform visualization for each audio clip
+- Multi-track support
+- Responsive design
+
+## Technologies Used
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- Web Audio API
+- WaveSurfer.js for waveform visualization
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v18.18.0 or later)
+- npm or yarn
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/AhmadAlYaaqba/Audio_playground.git
+cd Audio_playground
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
