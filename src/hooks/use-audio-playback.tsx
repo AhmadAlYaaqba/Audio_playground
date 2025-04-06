@@ -55,7 +55,7 @@ export function useAudioPlayback(
   }, [audioPills])
 
   // Update the current time during playback
-  const updateCurrentTime = useCallback(() => {
+  const updateCurrentTime = () => {
     if (!audioContextRef.current || !isPlayingRef.current) return
 
     const elapsed = audioContextRef.current.currentTime - startTimeRef.current
@@ -76,10 +76,10 @@ export function useAudioPlayback(
     }
 
     animationFrameRef.current = requestAnimationFrame(updateCurrentTime)
-  }, [setCurrentTime])
+  }
 
   // Check for upcoming pills that need to be scheduled
-  const checkAndScheduleUpcomingPills = useCallback(
+  const checkAndScheduleUpcomingPills = 
     (currentPosition: number) => {
       // Look ahead by 5 seconds to schedule upcoming pills
       const lookAheadTime = currentPosition + 5
@@ -111,12 +111,10 @@ export function useAudioPlayback(
           movedPillsRef.current.delete(pillId)
         }
       })
-    },
-    [audioPills],
-  )
+    }
 
   // Force stop the audio context to ensure all audio stops
-  const forceStopAudio = useCallback(() => {
+  const forceStopAudio = () => {
     if (!audioContextRef.current) return
 
     // Suspend the audio context to immediately stop all audio
@@ -138,7 +136,7 @@ export function useAudioPlayback(
         })
       }
     }, 100)
-  }, [])
+  }
 
   // Stop all audio and clear resources
   const stopAllAudio = useCallback(() => {
