@@ -49,7 +49,6 @@ export default function WavesurferClient({
         waveColor,
         progressColor: waveColor,
         height,
-        width,
         cursorWidth: 0,
         barWidth: 1,
         barGap: 2,

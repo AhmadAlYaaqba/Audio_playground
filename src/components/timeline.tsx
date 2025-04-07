@@ -126,7 +126,6 @@ export default function Timeline({
                 track={track}
                 index={index}
                 audioPills={audioPills.filter((pill) => pill.trackId === track.id)}
-                allPills={audioPills}
                 scale={scale}
                 onMovePill={onMovePill}
                 onRemoveTrack={onRemoveTrack}
