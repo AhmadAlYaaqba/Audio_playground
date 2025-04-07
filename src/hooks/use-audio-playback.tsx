@@ -361,6 +361,7 @@ export function useAudioPlayback(
 
       // Always stop the pill first to prevent duplicate playback
       stopPill(pillId)
+      stopAllAudio()
 
       // Update our tracking map with the new position
       pillPositionsRef.current.set(pillId, {
@@ -394,6 +395,7 @@ export function useAudioPlayback(
           trackId: newTrackId,
         })
       }
+      play(currentPosition)
     },
     [audioPills, stopPill, schedulePill],
   )
